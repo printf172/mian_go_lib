@@ -114,7 +114,7 @@ func GetTodayWeather(s string) (Weather, error) {
 		}
 	}
 	// 有一个为空就返回错误
-	if weather.MinWeather == 0 || weather.MaxWeather == 0 || weather.Condition == "" || len(weather.IndexMap) == 0 {
+	if weather.Condition == "" || len(weather.IndexMap) == 0 {
 		return Weather{}, fmt.Errorf("error parsing weather data")
 	}
 	return weather, nil

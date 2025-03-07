@@ -6,7 +6,7 @@ import (
 )
 
 func TestGetWeather(t *testing.T) {
-	s, err := GetWeatherDataOri("浙江", "杭州")
+	s, err := GetWeatherDataOri("北京", "")
 	if err != nil {
 		t.Fatal(err)
 	}
