@@ -102,3 +102,8 @@ func (o *OpenAI) Chat(content string) (string, error) {
 
 	return resp.Choices[0].Message.Content, nil
 }
+
+// SetSystemPrompt allows changing the system prompt (renshe)
+func (o *OpenAI) SetSystemPrompt(prompt string) {
+    o.renshe = prompt
+}
