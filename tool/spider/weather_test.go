@@ -1,8 +1,9 @@
 package spider
 
 import (
-	"github.com/intmian/mian_go_lib/tool/misc"
 	"testing"
+
+	"github.com/intmian/mian_go_lib/tool/misc"
 )
 
 func TestGetWeather(t *testing.T) {
@@ -11,7 +12,7 @@ func TestGetWeather(t *testing.T) {
 		t.Fatal(err)
 	}
 	s = misc.ReplaceUnicodeEscapes(s)
-	weather, err := GetTodayWeather(s)
+	weather, err := Get15DaysWeather(s)
 	if err != nil {
 		t.Fatal(err)
 	}
